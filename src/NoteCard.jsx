@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 
 const NoteCard = ({ note, handleDelete, editCard }) => {
-  // const handleTitleChange = (e) => {
-  //   editCard(note.id, { title: e.target.value });
-  // };
+  const [labelInput, setLabelInput] = useState("");
+  const [labels, setLabels] = useState([]);
+
+  const handleLabelChange = (e) => {
+    setLabelInput(e.target.value);
+  };
+
+  const addLabel = () => {
+    if (labelInput.trim() !== "") {
+      const newLabel = { id: Date.now(), text: labelInput };
+      setLabels([...labels, newLabel]);
+      setLabelInput("");
+    }
+  };
 
   const toggleEdit = () => {
     editCard(note.id, { isEditing: !note.isEditing });
@@ -11,13 +22,6 @@ const NoteCard = ({ note, handleDelete, editCard }) => {
 
   return (
     <div style={{ margin: "10px 0" }}>
-      {/* <input
-        type="text"
-        disabled={!note.isEditing}
-        onChange={handleTitleChange}
-        value={note.title || ""}
-        placeholder="Title"
-      /> */}
       <input
         type="text"
         disabled={!note.isEditing}
@@ -35,6 +39,22 @@ const NoteCard = ({ note, handleDelete, editCard }) => {
       <br />
       <button onClick={toggleEdit}>{note.isEditing ? "Save" : "Edit"}</button>
       <button onClick={() => handleDelete(note.id)}>Delete</button>
+
+      <br />
+      <div>
+        <input
+          type="text"
+          value={labelInput}
+          onChange={handleLabelChange}
+          placeholder="Add a label"
+        />
+        <button onClick={addLabel}>Add label</button>
+        <ul>
+          {labels.map((label) => (
+            <li key={label.id}>{label.text}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
