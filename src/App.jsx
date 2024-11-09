@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NoteCard from "./NoteCard";
+import LabelManager from "./LabelManager";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
@@ -42,6 +43,7 @@ const App = () => {
           editCard={editCard}
         />
       ))}
+      <LabelManager />
     </div>
   );
 };

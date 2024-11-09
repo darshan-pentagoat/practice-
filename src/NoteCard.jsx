@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const NoteCard = ({ note, handleDelete, editCard }) => {
-  const [labelInput, setLabelInput] = useState("");
   const [labels, setLabels] = useState([]);
+  const [labelInput, setLabelInput] = useState("");
 
   const handleLabelChange = (e) => {
     setLabelInput(e.target.value);
