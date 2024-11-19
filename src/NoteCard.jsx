@@ -14,7 +14,7 @@ const NoteCard = ({ note, handleDelete, editCard }) => {
       setLabels([...labels, newLabel]);
       setLabelInput("");
     }
-  };
+  };   
 
   const toggleEdit = () => {
     editCard(note.id, { isEditing: !note.isEditing });

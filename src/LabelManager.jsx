@@ -16,6 +16,12 @@ const LabelManager = () => {
   };
 
   // Function to handle editing a label
+  // const editLabel = (id) => {
+  //   const labelToEdit = labels.find((label) => label.id === id);
+  //   setEditingLabelId(id);
+  //   setEditedText(labelToEdit.text);
+  // };
+
   const editLabel = (id) => {
     const labelToEdit = labels.find((label) => label.id === id);
     setEditingLabelId(id);

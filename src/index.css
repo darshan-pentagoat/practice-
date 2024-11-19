@@ -1,0 +1,11 @@
+.img[animate="1"] {
+  animation: slide 1s 1;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
