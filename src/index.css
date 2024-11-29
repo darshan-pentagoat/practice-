@@ -9,3 +9,57 @@
     transform: translateX(100px);
   }
 }
+
+.carousel_div {
+  display: grid;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+.item_card {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+  flex: 1;
+  justify-content: center;
+}
+
+.carousel__slide {
+  flex: 1;
+  max-width: calc(100% / 2);
+}
+
+.carousel__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel__btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel__btn--prev {
+  margin-right: 10px;
+}
+
+.carousel__btn--next {
+  margin-left: 10px;
+}

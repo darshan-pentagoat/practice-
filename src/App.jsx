@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import NoteCard from "./NoteCard";
 import LabelManager from "./LabelManager";
 import Animation from "./Animation";
+import { Data } from "./Data";
+
+import Carousel from "./Carousel";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
+  const images = [
+    "https://via.placeholder.com/800x400/ff5733/fff",
+    "https://via.placeholder.com/800x400/33ff57/fff",
+    "https://via.placeholder.com/800x400/5733ff/fff",
+    "https://via.placeholder.com/800x400/33ff57/fff",
+  ];
 
   const addNote = () => {
     const newNote = { id: Date.now(), title: "", isEditing: true };
@@ -45,7 +54,8 @@ const App = () => {
         />
       ))}
       {/* <LabelManager /> */}
-      <Animation />
+      {/* <Animation /> */}
+      <Carousel data={Data} />
     </div>
   );
 };
