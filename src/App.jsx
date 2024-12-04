@@ -5,6 +5,7 @@ import Animation from "./Animation";
 import { Data } from "./Data";
 
 import Carousel from "./Carousel";
+import Slider from "./Slider";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
@@ -55,7 +56,8 @@ const App = () => {
       ))}
       {/* <LabelManager /> */}
       {/* <Animation /> */}
-      <Carousel data={Data} />
+      {/* <Carousel data={Data} /> */}
+      <Slider />
     </div>
   );
 };

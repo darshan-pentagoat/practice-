@@ -63,3 +63,20 @@
 .carousel__btn--next {
   margin-left: 10px;
 }
+.main-container {
+  width: 500px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  background: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

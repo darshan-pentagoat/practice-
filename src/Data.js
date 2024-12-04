@@ -1,7 +1,7 @@
 export const Data = [
   {
     id: 1,
-    name: "Product 100",
+    name: "Product 1",
     image: "https://via.placeholder.com/600x300?text=Product+1",
   },
   {

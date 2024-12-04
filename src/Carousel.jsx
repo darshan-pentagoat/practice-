@@ -41,7 +41,6 @@ const Carousel = ({ data }) => {
       <div className="carousel__track">
         {chunkedData[activeIndex].map((item) => (
           <div key={item.id} className="carousel__slide">
-            <img src={item.image} alt={item.name} className="carousel__img" />
             <div className="carousel__content">
               <h3>{item.name}</h3>
               <p>ID: {item.id}</p>
